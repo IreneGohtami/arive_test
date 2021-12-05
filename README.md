@@ -29,9 +29,15 @@ Serve built project with the following command:
 npm run serve
 ```
 
+## Swagger Documentation
+
+Go to your host url and add /documentation path, for ex:
+```
+http://localhost:3000/documentation
+```
+
 ## Testing
 
-Run
 ```
 npm run test
 ```

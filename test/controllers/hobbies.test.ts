@@ -13,7 +13,7 @@ describe("HobbyController", () => {
         mongoServer = await MongoMemoryServer.create();
         const mongoUri = mongoServer.getUri();
         await mongoose.connect(mongoUri);
-        server = await init(true);
+        server = await init();
     });
       
     after(async () => {
@@ -24,7 +24,7 @@ describe("HobbyController", () => {
 
     let docId: string;
     const mockHobby = {
-        passionLevel: "high",
+        passionLevel: "High",
         name: "swimming",
         year: 2010
     };

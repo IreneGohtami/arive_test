@@ -2,14 +2,6 @@
     "version": "0.1.0",
     "configurations": [
         {
-            "type": "node",
-            "request": "launch",
-            "name": "Debug Tests",
-            "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
-            "cwd": "${workspaceRoot}",
-            "args": ["--i"]
-        },
-        {
             "name": "Debug Server",
             "type": "node",
             "request": "launch",

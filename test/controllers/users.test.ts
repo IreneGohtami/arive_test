@@ -17,11 +17,11 @@ describe("UserController", () => {
         mongoServer = await MongoMemoryServer.create();
         const mongoUri = mongoServer.getUri();
         await mongoose.connect(mongoUri);
-        server = await init(true);
+        server = await init();
 
         // create at least 1 hobby
         const hobbyDoc = await Hobby.create({
-            passionLevel: "high",
+            passionLevel: "High",
             name: "swimming",
             year: 2010
         })

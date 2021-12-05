@@ -12,13 +12,5 @@ module.exports = {
     rules: {
         "@typescript-eslint/no-var-requires": "off",
         "@typescript-eslint/no-explicit-any": "off"
-    },
-    settings: {
-        "import/resolver": {
-            alias: {
-                map: [["src/*", "./src/"]],
-                extensions: [".ts", ".js", ".json"]
-            }
-        }
     }
 }

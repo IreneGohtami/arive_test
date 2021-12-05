@@ -5,20 +5,20 @@ import { Server, ServerRoute } from '@hapi/hapi';
 import Inert from '@hapi/inert';
 import Vision from '@hapi/vision';
 import HapiSwagger from 'hapi-swagger';
-import { HOST, PORT } from './config';
+import { NODE_ENV, HOST, PORT } from './config';
 import { hobbyController, userController } from './controllers';
 import { connect } from './mongo';
 
 export let server: Server;
 
-export const init = async function(isTest: boolean): Promise<Server> {
+export const init = async function(): Promise<Server> {
     server = Hapi.server({
         port: PORT,
         host: HOST
     });
 
     // Connect to DB
-    if (!isTest) {
+    if (NODE_ENV !== 'test') {
         await connect();
     }
 

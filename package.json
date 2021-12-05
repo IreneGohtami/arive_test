@@ -5,9 +5,9 @@
   "main": "init.js",
   "scripts": {
     "build": "rm -rf dist && tsc",
-    "serve": "nodemon -e js -w dist dist/init.js",
+    "serve": "nodemon -r dotenv/config dist/init.js",
     "start": "npm run build && npm run serve",
-    "test": "mocha --timeout 10000 -r ts-node/register test/**/*.test.ts",
+    "test": "NODE_ENV=test mocha --timeout 10000 -r ts-node/register test/**/*.test.ts",
     "lint": "eslint . --ext .ts"
   },
   "author": "Irene Gohtami",
@@ -16,6 +16,7 @@
     "@hapi/hapi": "^20.2.1",
     "@hapi/inert": "^6.0.4",
     "@hapi/vision": "^6.1.0",
+    "dotenv": "^10.0.0",
     "hapi-swagger": "^14.2.4",
     "joi": "^17.5.0",
     "joi-objectid": "^4.0.2",
