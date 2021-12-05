@@ -4,7 +4,7 @@ An application starter built on Hapi, TypeScript, and MongoDB.
 
 ## Development
 
-* Clone down the repository.
+* Clone the repository
 * Install npm modules
 ```
 npm i
